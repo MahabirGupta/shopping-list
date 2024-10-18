@@ -1,4 +1,12 @@
+import shoppingList from "../data/data";
+import List from "./List";
 const Main = () => {
-  return <div>Main</div>;
+  return (
+    <ul className="mainWrapper">
+      {shoppingList.map((item) => (
+        <List item={item} />
+      ))}
+    </ul>
+  );
 };
 export default Main;
